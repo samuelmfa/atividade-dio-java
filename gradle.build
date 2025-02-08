@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+   // JUnit 5 for unit testing
+   testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+   // Log4j for logging (optional)
+   implementation 'org.apache.logging.log4j:log4j-core:2.14.1'
+   implementation 'org.apache.logging.log4j:log4j-api:2.14.1'
+}
+
+test {
+    useJUnitPlatform()
+}
